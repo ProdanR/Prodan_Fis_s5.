@@ -2,8 +2,8 @@ package loose.oose.fis.documents;
 
 import java.util.Arrays;
 
-public class JSON extends Document {
-    public JSON(String[] continut) {
+public class PDF extends Document {
+    public PDF(String[] continut) {
         super(continut);
     }
 
@@ -13,7 +13,7 @@ public class JSON extends Document {
         int      pos = 0;
 
         for (String cuvant : continut) {
-            if (!cuvant.contains("!!!!")) {
+            if (!cuvant.contains(",")) {
                 res[pos] = cuvant;
                 pos++;
             }
@@ -24,6 +24,6 @@ public class JSON extends Document {
 
     @Override
     public String toString() {
-        return "THIS FILE IS JSON " + super.toString();
+        return "PDF " + super.toString();
     }
 }
